@@ -27,7 +27,7 @@ class Classifier(nn.Module):
             nn.Conv2d(16, 32, 4, 2),
             nn.ReLU(),
             nn.MaxPool2d(2, 1),
-            Flatten(),
+            nn.Flatten(),
             nn.Linear(288, 10),
             nn.LogSoftmax(dim=1)
         ).to(device)
